@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,29 +18,77 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="puG-am-go0">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="128" width="414" height="734"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Hcu-IH-CoL">
+                                <rect key="frame" x="184.5" y="425.5" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="LYD-2n-WRx"/>
+                                    <constraint firstAttribute="height" constant="45" id="eRe-v5-Fr2"/>
+                                </constraints>
+                                <color key="color" systemColor="labelColor"/>
+                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djQ-An-bgj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POSTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubk-Xi-ef4">
+                                        <rect key="frame" x="171.5" y="7" width="71" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="21"/>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="ubk-Xi-ef4" firstAttribute="centerX" secondItem="djQ-An-bgj" secondAttribute="centerX" id="MEL-be-N5d"/>
+                                    <constraint firstAttribute="height" constant="40" id="rOP-oj-M3E"/>
+                                    <constraint firstItem="ubk-Xi-ef4" firstAttribute="centerY" secondItem="djQ-An-bgj" secondAttribute="centerY" id="wX2-3S-kqI"/>
+                                </constraints>
+                            </view>
+                            <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Vj-p4-BNC">
+                                <rect key="frame" x="0.0" y="84" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ndA-kK-Ckk"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="puG-am-go0" secondAttribute="trailing" id="3Jl-we-YnC"/>
-                            <constraint firstItem="puG-am-go0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5o5-ec-LQq"/>
+                            <constraint firstItem="Hcu-IH-CoL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7WG-FS-Wvu"/>
+                            <constraint firstItem="Hcu-IH-CoL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MKg-Tb-f03"/>
                             <constraint firstItem="puG-am-go0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zmn-CO-knw"/>
+                            <constraint firstItem="3Vj-p4-BNC" firstAttribute="top" secondItem="djQ-An-bgj" secondAttribute="bottom" id="b5I-k8-7HO"/>
+                            <constraint firstItem="3Vj-p4-BNC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="c7i-bA-Vto"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="puG-am-go0" secondAttribute="bottom" id="fLR-JD-dni"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="djQ-An-bgj" secondAttribute="trailing" id="jh5-iQ-tu8"/>
+                            <constraint firstItem="djQ-An-bgj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oLy-Fm-w6B"/>
+                            <constraint firstItem="puG-am-go0" firstAttribute="top" secondItem="3Vj-p4-BNC" secondAttribute="bottom" id="sTU-6o-w4o"/>
+                            <constraint firstItem="djQ-An-bgj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="u08-oA-QQN"/>
+                            <constraint firstItem="3Vj-p4-BNC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zFx-wl-lOG"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="Hcu-IH-CoL" id="eS6-jq-4KJ"/>
+                        <outlet property="searchBar" destination="3Vj-p4-BNC" id="oWc-yA-xCh"/>
                         <outlet property="tblViewPosts" destination="puG-am-go0" id="p0I-kJ-1G5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="84"/>
+            <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
