@@ -6,37 +6,34 @@
 //
 import Foundation
 struct APIService {
-    
-    var serviceLayer:ServiceLayer?
+    var serviceLayer: ServiceLayer?
 
     func fetchPosts(completionHandler: @escaping ([Posts]?, Error?) -> Void) {
         let pathPosts = Constants.baseURL + Constants.endPointPosts
-        serviceLayer?.fetch(path: pathPosts, completionHandler: { data, response, error in
+        serviceLayer?.fetch(path: pathPosts, completionHandler: { data, _, error in
             if let data = data {
-                                
                 do {
                     let posts = try JSONDecoder().decode([Posts].self, from: data)
-                    completionHandler(posts,nil)
+                    completionHandler(posts, nil)
                 } catch {
-                    completionHandler(nil , NSError(domain: "", code: 1, userInfo: nil))
+                    completionHandler(nil, NSError(domain: "", code: 1, userInfo: nil))
                 }
-                
+
             } else {
                 completionHandler(nil, error)
             }
         })
     }
-    
-    func fetchComments(completionHandler: @escaping ([Comments]?, Error?) -> Void) {
-        let pathPosts = Constants.baseURL + Constants.endPointComments
-        serviceLayer?.fetch(path: pathPosts, completionHandler: { data, response, error in
-            if let data = data {
 
+    func fetchComments(postId: Int, completionHandler: @escaping ([Comments]?, Error?) -> Void) {
+        let pathPosts = Constants.baseURL + Constants.endPointComments + "?postId=\(postId)"
+        serviceLayer?.fetch(path: pathPosts, completionHandler: { data, _, error in
+            if let data = data {
                 do {
                     let comments = try JSONDecoder().decode([Comments].self, from: data)
-                    completionHandler(comments,nil)
+                    completionHandler(comments, nil)
                 } catch {
-                    completionHandler(nil , NSError(domain: "", code: 1, userInfo: nil))
+                    completionHandler(nil, NSError(domain: "", code: 1, userInfo: nil))
                 }
 
             } else {
@@ -45,4 +42,3 @@ struct APIService {
         })
     }
 }
-

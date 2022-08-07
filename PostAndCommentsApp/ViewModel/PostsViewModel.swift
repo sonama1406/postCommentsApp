@@ -7,47 +7,56 @@
 
 import Foundation
 
-class PostsViewModel : NSObject {
-    
+class PostsViewModel: NSObject {
     private var apiHelper = APIService(serviceLayer: ServiceLayerImpl())
-    private(set) var postData : [Posts]? {
+    private(set) var postData: [Posts]? {
         didSet {
-            self.bindEmployeeViewModelToController()
+            bindPostsViewModelToController()
         }
     }
-    
-    private(set) var searchedPosts : [Posts]? {
+
+    private(set) var searchedPosts: [Posts]? {
         didSet {
-            self.bindEmployeeViewModelToController()
+            bindPostsViewModelToController()
         }
     }
-    
-    var bindEmployeeViewModelToController : (() -> ()) = {}
-    
+
+    private(set) var error: Error? {
+        didSet {
+            showError()
+        }
+    }
+
+    var bindPostsViewModelToController: (() -> Void) = {}
+
+    var showError: (() -> Void) = {}
+
     override init() {
         super.init()
         getPostsData()
     }
-    
-    func getPostsData() {
-        
+
+    private func getPostsData() {
+        // get posts from server
         apiHelper.fetchPosts { postData, err in
-            self.postData = postData
+            if err == nil {
+                self.postData = postData
+            } else {
+                self.error = err
+            }
         }
     }
-    
+
     func getSearchedData(searchString: String) {
         if searchedPosts?.count ?? 0 > 0 {
             searchedPosts?.removeAll()
         }
         if searchString.isEmpty {
-            self.searchedPosts = postData
+            searchedPosts = postData
         } else {
-            self.searchedPosts = postData?.filter({ posts in
+            searchedPosts = postData?.filter { posts in
                 posts.title.lowercased().contains(searchString.lowercased())
-            })
+            }
         }
-        
     }
 }
-

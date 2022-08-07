@@ -15,4 +15,3 @@ struct Comments: Codable {
         case id, name, email, body
     }
 }
-

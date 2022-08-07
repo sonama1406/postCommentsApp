@@ -8,9 +8,8 @@
 import UIKit
 
 class PostTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var lblBody: UILabel!
-    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet var lblBody: UILabel!
+    @IBOutlet var lblTitle: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,5 +20,4 @@ class PostTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }

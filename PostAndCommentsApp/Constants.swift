@@ -10,5 +10,4 @@ struct Constants {
     static let baseURL = "https://jsonplaceholder.typicode.com"
     static let endPointComments = "/comments"
     static let endPointPosts = "/posts"
-    
 }

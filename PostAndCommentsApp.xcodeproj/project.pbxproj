@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		9A05B40C289EB27900FA03B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A05B40B289EB27900FA03B8 /* AppDelegate.swift */; };
 		9A05B40E289EB27900FA03B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A05B40D289EB27900FA03B8 /* SceneDelegate.swift */; };
-		9A05B410289EB27900FA03B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A05B40F289EB27900FA03B8 /* ViewController.swift */; };
+		9A05B410289EB27900FA03B8 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A05B40F289EB27900FA03B8 /* PostsViewController.swift */; };
 		9A05B413289EB27900FA03B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A05B411289EB27900FA03B8 /* Main.storyboard */; };
 		9A05B415289EB27A00FA03B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A05B414289EB27A00FA03B8 /* Assets.xcassets */; };
 		9A05B418289EB27A00FA03B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A05B416289EB27A00FA03B8 /* LaunchScreen.storyboard */; };
@@ -21,14 +21,16 @@
 		9A05B42E289EB71200FA03B8 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A05B42D289EB71200FA03B8 /* Comments.swift */; };
 		9A05B430289EBA7B00FA03B8 /* ServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A05B42F289EBA7B00FA03B8 /* ServiceLayer.swift */; };
 		9A05B433289EC27400FA03B8 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A05B432289EC27400FA03B8 /* PostsViewModel.swift */; };
-		9A05B435289EC36300FA03B8 /* PostTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A05B434289EC36300FA03B8 /* PostTableViewDataSource.swift */; };
+		9A05B435289EC36300FA03B8 /* PostAndCommentsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A05B434289EC36300FA03B8 /* PostAndCommentsTableViewDataSource.swift */; };
+		9A71B714289FA04200E14776 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A71B713289FA04200E14776 /* CommentsViewController.swift */; };
+		9A71B716289FA32900E14776 /* CommentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A71B715289FA32900E14776 /* CommentsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9A05B408289EB27900FA03B8 /* PostAndCommentsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostAndCommentsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A05B40B289EB27900FA03B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A05B40D289EB27900FA03B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9A05B40F289EB27900FA03B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9A05B40F289EB27900FA03B8 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		9A05B412289EB27900FA03B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9A05B414289EB27A00FA03B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A05B417289EB27A00FA03B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -41,7 +43,9 @@
 		9A05B42D289EB71200FA03B8 /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
 		9A05B42F289EBA7B00FA03B8 /* ServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLayer.swift; sourceTree = "<group>"; };
 		9A05B432289EC27400FA03B8 /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
-		9A05B434289EC36300FA03B8 /* PostTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewDataSource.swift; sourceTree = "<group>"; };
+		9A05B434289EC36300FA03B8 /* PostAndCommentsTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAndCommentsTableViewDataSource.swift; sourceTree = "<group>"; };
+		9A71B713289FA04200E14776 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		9A71B715289FA32900E14776 /* CommentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 		9A05B40A289EB27900FA03B8 /* PostAndCommentsApp */ = {
 			isa = PBXGroup;
 			children = (
+				9A71B717289FA66500E14776 /* ViewControllers */,
 				9A05B431289EC26100FA03B8 /* ViewModel */,
 				9A05B42A289EB6F500FA03B8 /* Model */,
 				9A05B427289EB58700FA03B8 /* Constants.swift */,
@@ -81,7 +86,6 @@
 				9A05B41F289EB2CE00FA03B8 /* TableViewCells */,
 				9A05B40B289EB27900FA03B8 /* AppDelegate.swift */,
 				9A05B40D289EB27900FA03B8 /* SceneDelegate.swift */,
-				9A05B40F289EB27900FA03B8 /* ViewController.swift */,
 				9A05B411289EB27900FA03B8 /* Main.storyboard */,
 				9A05B414289EB27A00FA03B8 /* Assets.xcassets */,
 				9A05B416289EB27A00FA03B8 /* LaunchScreen.storyboard */,
@@ -121,9 +125,19 @@
 			isa = PBXGroup;
 			children = (
 				9A05B432289EC27400FA03B8 /* PostsViewModel.swift */,
-				9A05B434289EC36300FA03B8 /* PostTableViewDataSource.swift */,
+				9A05B434289EC36300FA03B8 /* PostAndCommentsTableViewDataSource.swift */,
+				9A71B715289FA32900E14776 /* CommentsViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9A71B717289FA66500E14776 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9A05B40F289EB27900FA03B8 /* PostsViewController.swift */,
+				9A71B713289FA04200E14776 /* CommentsViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,15 +212,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A05B410289EB27900FA03B8 /* ViewController.swift in Sources */,
+				9A05B410289EB27900FA03B8 /* PostsViewController.swift in Sources */,
 				9A05B42C289EB70400FA03B8 /* Posts.swift in Sources */,
 				9A05B426289EB57300FA03B8 /* APIService.swift in Sources */,
 				9A05B40C289EB27900FA03B8 /* AppDelegate.swift in Sources */,
 				9A05B40E289EB27900FA03B8 /* SceneDelegate.swift in Sources */,
-				9A05B435289EC36300FA03B8 /* PostTableViewDataSource.swift in Sources */,
+				9A05B435289EC36300FA03B8 /* PostAndCommentsTableViewDataSource.swift in Sources */,
 				9A05B422289EB2F200FA03B8 /* PostTableViewCell.swift in Sources */,
 				9A05B433289EC27400FA03B8 /* PostsViewModel.swift in Sources */,
+				9A71B714289FA04200E14776 /* CommentsViewController.swift in Sources */,
 				9A05B428289EB58700FA03B8 /* Constants.swift in Sources */,
+				9A71B716289FA32900E14776 /* CommentsViewModel.swift in Sources */,
 				9A05B430289EBA7B00FA03B8 /* ServiceLayer.swift in Sources */,
 				9A05B42E289EB71200FA03B8 /* Comments.swift in Sources */,
 			);
